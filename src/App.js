@@ -44,10 +44,12 @@ function App() {
   },[todos]);
 
   return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <TodoTemplate>
       <TodoInsert onInsert={onInsert}/>
       <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle}/>
     </TodoTemplate>
+    </BrowserRouter>
   )
 }
 
